@@ -1,0 +1,26 @@
+{
+	"manifest_version": 3,
+	"name": "Data Extractor to Excel",
+	"version": "1.0",
+	"description": "Extract data from web pages and download it as an Excel file.",
+	"permissions": ["activeTab", "scripting", "downloads"],
+	"host_permissions": ["<all_urls>"],
+	"background": {
+	  "service_worker": "background.js"
+	},
+	"action": {
+	  "default_popup": "popup.html",
+	  "default_icon": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	  },
+	"web_accessible_resources": [
+		{
+		  "resources": ["libs/xlsx.mini.min.js"],
+		  "matches": ["<all_urls>"]
+		}
+	]
+	}
+  }
+  
